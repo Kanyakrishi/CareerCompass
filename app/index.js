@@ -18,16 +18,21 @@ const Home = () => {
         options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: true,
-          headerLeft: () => (<ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />),
-          headerRight: () => (<ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />),
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
+          ),
           headerTitle: " ",
         }}
       />
       <ScrollView showsVerticalScrollIndicator={true}>
         <View style={{ flex: 1, padding: SIZES.medium }}>
-        <Welcome/>
-        <Nearbyjobs/>
-        <Popularjobs/>
+          <Welcome />
+
+          <Popularjobs />
+          <Nearbyjobs />
         </View>
       </ScrollView>
     </SafeAreaView>
