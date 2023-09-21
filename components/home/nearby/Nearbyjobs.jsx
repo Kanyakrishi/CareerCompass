@@ -6,10 +6,12 @@ import {
 } from "react-native";
 import useFetch from "../../../hook/useFetch";
 import styles from "./nearbyjobs.style";
+import { Stack, useRouter } from "expo-router";
 import { COLORS, SIZES } from "../../../constants";
 import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
 
 const Nearbyjobs = () => {
+    const router = useRouter();
   const { data, isLoading, error } = useFetch("search", {
     query: "React developer",
     num_pages: "1",
